@@ -39,6 +39,14 @@ class User extends BaseController
 		}		
 	}
 
+	public function edit($id = null){
+		if($id){
+			return view('form', [
+				'user' => $this->userModel->find($id)
+			]);
+		}
+	}
+
 	public function delete($id = null){
 		if($id){
 			$resp = $this->userModel->delete($id);
