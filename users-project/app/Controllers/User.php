@@ -15,7 +15,28 @@ class User extends BaseController
 	public function index()
 	{
 		return view('users', [
-			'users' => $this->userModel->findAll()
+			'users' => $this->userModel->paginate(5),
+			'pager' => $this->userModel->pager
 		]);
+	}
+
+	public function create(){
+		return view('form');
+	}
+
+	public function delete($id = null){
+		if($id){
+			$resp = $this->userModel->delete($id);
+
+			if($resp){
+				echo view('messages', [
+					'message' => 'Usuário excluído com sucesso!'
+				]);
+			}else{
+				echo view('messages', [
+					'message' => 'Erro ao tentar excluir, tente novamente!'
+				]);
+			}
+		}
 	}
 }
