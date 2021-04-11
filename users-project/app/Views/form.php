@@ -32,7 +32,19 @@
                 <input type="text" name="user_state" id="user_state" class="form-control" placeholder="Selecione o estado">
             </div>
 
+            <div class="form-group">
+                <label for="user_city">Estado</label>
+                <input type="text" name="user_city" id="user_city" class="form-control" placeholder="cidade...">
+            </div>
 
+            <div class="form-group">
+                <label for="user_address">Endereço</label>
+                <input type="text" name="user_address" id="user_address" class="form-control" placeholder="Rua, Travessa, Avenida e etc...">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary">
+            </div>
 
         <?= form_close() ?>
     </div>

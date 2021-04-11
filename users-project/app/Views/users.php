@@ -49,8 +49,8 @@
                     <td><?= $user['user_phone'] ?></td>
                     <td><?= $user['user_mail'] ?></td>
                     <td>
-                        <?= anchor('user/edit/'.$user['id'], 'Editar')?>
-                        <?= anchor('user/delete/'.$user['id'], 'Excluir', ['onclick' => 'return confExcl()'])?>
+                        <?= anchor('user/edit/'.$user['id'], 'Editar', ['class' => 'btn btn-primary'])?>
+                        <?= anchor('user/delete/'.$user['id'], 'Excluir', ['class' => 'btn btn-danger', 'onclick' => 'return confExcl()'])?>
                     </td>
                 </tr>
             <?php endforeach; ?>
