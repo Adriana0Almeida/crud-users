@@ -13,10 +13,10 @@ class User extends BaseController
 	{
 		$this->userModel = new UserModel();
 	}
-	public function index()
-	{
+	
+	public function index(){
 		return view('users', [
-			'users' => $this->userModel->orderBy('id', 'DESC')->paginate(5),
+			'users' => $this->userModel->orderBy('id', 'DESC')->findAll(),
 			'pager' => $this->userModel->pager
 		]);
 	}
