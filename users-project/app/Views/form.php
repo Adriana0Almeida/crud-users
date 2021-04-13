@@ -15,7 +15,7 @@
 
         <div class="form-group">
             <label for="user_dt">Data Nascimento</label>
-            <input type="text" value="<?= isset($user['user_dt']) ? $user['user_dt'] : ''; ?>" name="user_dt" id="user_dt" class="form-control" placeholder="Somente números">
+            <input type="date" value="<?= isset($user['user_dt']) ? $user['user_dt'] : ''; ?>" name="user_dt" id="user_dt" class="form-control" placeholder="Somente números">
         </div>
 
         <div class="form-group">

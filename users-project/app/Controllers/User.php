@@ -26,9 +26,10 @@ class User extends BaseController
 		return view('form');
 	}
 
-	public function store(){
+	public function store()
+	{
 		$insert = $this->userModel->save($this->request->getPost());	
-		if($insert){		
+		if($insert){
 			return view('messages', [
 				'message' => 'Salvo com sucesso!'
 			]);
@@ -39,7 +40,8 @@ class User extends BaseController
 		}		
 	}
 
-	public function edit($id = null){
+	public function edit($id = null)
+	{
 		if($id){
 			return view('form', [
 				'user' => $this->userModel->find($id)
